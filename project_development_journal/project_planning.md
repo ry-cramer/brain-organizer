@@ -59,3 +59,8 @@ I've decided that my software concept as it stands will probably be better suite
 2. Identifying key words to associate with certain categories (i.e. is likely to talk about "pros and cons," "problems" and "solutions", "things to avoid" and "goals", etc.) is better suited to text classification than topic modeling, and since structure is usually relatively predictable in a productive brainstorm, this would likely be the more beneficial task. 
 3. My main struggle is with creative brainstorming. I have a hard time creating something from nothing, and my main goal at the beginning was creating a software that would remove the organization hurdle I face with creative brainstorming. I don't struggle as much with productive brainstorming because I have a focused goal, the number of ideas I can generate is usually smaller, and having a focused structure from the beginning helps me to put all of my ideas in context of my project and generate new ideas because of those correlations. It's much easier to avoid getting overwhelmed with productive brainstorming, at least for me, so that's the problem I'm most interested in solving.
 
+## Days 4-5
+I worked on my NMF model and hav managed to get something potentially decent working. 
+### Main decisions:
+1. I'm using an NMF model for my application. Based on my research, this technique is relatively simple, flexible, and gives me the range I need for my model without using as many resources
+2. I created a class for my input documents, which will hopefully make it easier to prep documents and condense the code in charge of it. I can hopefully bring the class over to my application to handle user input as part of my backend, and once I have a model I'm satisfied with, I can pickle it and port it over as well.
