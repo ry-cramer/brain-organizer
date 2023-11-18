@@ -27,45 +27,8 @@ documents_by_paragraph = experiment_input.strip().split('\n')
 documents_by_paragraph = list(map(str.strip, documents_by_paragraph))
 # %%
 # Vectorizing
-'''
-To do:
-    - Bi/trigrams
-    - Stop words
-    - Stemming
-    - Contractions?
-    - Punctuation
-'''
-class Input:
-    # STOP_WORDS = ENGLISH_STOP_WORDS
-    def __init__(self, text):
-        self.vectorizer = TfidfVectorizer(
-            stop_words = 'english',
-            max_df = .85,
-            ngram_range = (1, 3),
-            max_features = 100
-            )
-        self.text = text
-        self.processed_text = self.__preprocess_text(text)
-        self.tfidf = self.__vectorize_text(self.processed_text, self.vectorizer)
-
-    def __preprocess_text(self, text):
-        '''
-        To do:
-            - Bi/trigrams
-            - Stop words
-            - Stemming
-            - Contractions?
-            - Punctuation
-        '''
-        text = re.split('\.\s', text.lower())
-        return TextBlob(text).words
-        
-
-    def __vectorize_text(self, processed_text):
-        tfidf = self.vectorizer.fit_transform(processed_text)
-        return tfidf
-
 vectorizer = TfidfVectorizer(stop_words='english')
+
 processed_p_docs = vectorizer.fit_transform(documents_by_paragraph)
 processed_s_docs = vectorizer.fit_transform(documents_by_sentence)
 # processed_s_docs = preprocess_documents(documents_by_sentence)
