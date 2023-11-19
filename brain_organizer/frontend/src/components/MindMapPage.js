@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
+import MindMap from "./MindMap";
 
 export default function MindMapPage() {
-    return <h1>Mind Map Page</h1>;
+    return MindMap;
 }
