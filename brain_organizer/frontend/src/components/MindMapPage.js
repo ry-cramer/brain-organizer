@@ -3,5 +3,5 @@ import { render } from "react-dom";
 import MindMap from "./MindMap";
 
 export default function MindMapPage() {
-    return MindMap;
+    return <div>{<MindMap />}</div>;
 }
